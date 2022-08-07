@@ -77,8 +77,21 @@
         <p>
             Our application does not use session storage technology used to store data.
         </p>
+        <div class="mt-5">
+            <a translate="no" id="link-iletisim"
+                href="mailto:what.is.my.ip.contact@gmail.com">what.is.my.ip.contact@gmail.com</a>
+            <table>
+                <tr>
+                    <td><img src="icon.png"></td>
+                    <td>
+                        <p>It is coded by <strong translate="no" class="lead fw-bold">Talha YILDIZ</strong> and <strong
+                                translate="no" class="lead fw-bold">Said Nuri YILDIZ</strong></p>
+                    </td>
+                </tr>
+            </table>
+        </div>
     </div>
-    <div style="width: 100%;height: 100px;"></div>
+
     <div class="p-3 text-center border border-1 border-start-0 border-bottom-0 border-end-0">
         &copy; All Rights Reserved
     </div>
@@ -86,10 +99,12 @@
         function geceModu() {
             localStorage.setItem("geceModu", 1);
             document.getElementsByTagName("body")[0].classList = "lead bg-dark text-light"
+            document.getElementById("link-iletisim").classList = "text-light lead";
         }
         function gunduzModu() {
             localStorage.setItem("geceModu", 0);
             document.getElementsByTagName("body")[0].classList = "lead bg-light text-dark"
+            document.getElementById("link-iletisim").classList = "text-primary lead";
         }
         if (localStorage.getItem("geceModu") == 0) {
             gunduzModu();
